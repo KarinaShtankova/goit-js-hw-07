@@ -34,7 +34,7 @@ function onGalleryClick(evt) {
 		return;
 	}
 	const modalImage = evt.target.getAttribute(`data-source`);
-	console.log(`Зображення`, modalImage);
+	// console.log(`Зображення`, modalImage);
 
 	const instance = basicLightbox.create(`
     <img src="${modalImage}" >
