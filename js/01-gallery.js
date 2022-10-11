@@ -29,8 +29,12 @@ galleryRef.addEventListener("click", onGalleryClick);
 
 function onGalleryClick(evt) {
 	evt.preventDefault();
+
+	if (evt.target === evt.currentTarget) {
+		return;
+	}
 	const modalImage = evt.target.getAttribute(`data-source`);
-	// console.log(`Зображення`, modalImage);
+	console.log(`Зображення`, modalImage);
 
 	const instance = basicLightbox.create(`
     <img src="${modalImage}" >
@@ -43,6 +47,7 @@ function onGalleryClick(evt) {
 	function onEscKeyPress(evt) {
 		// console.log(evt);
 		// console.log(evt.key);
+
 		if (evt.key === "Escape") {
 			instance.close();
 		}
