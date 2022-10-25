@@ -50,6 +50,7 @@ function onGalleryClick(evt) {
 
 		if (evt.key === "Escape") {
 			instance.close();
+			window.removeEventListener(`keydown`, onEscKeyPress);
 		}
 	}
 
